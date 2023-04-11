@@ -77,10 +77,10 @@ public class MenuCalculoAvanzado {
 		Scanner sc = new Scanner(System.in);
 		double input = 0;
 		if (opcion == 1) {
-			System.out.println("Introduce el primer número: ");
+			System.out.println("Introduce la base: ");
 		}
 		if (opcion == 2) {
-			System.out.println("Introduce el segundo número: ");
+			System.out.println("Introduce el exponente: ");
 		}
 		if (opcion == 3) {
 			System.out.println("Introduce el número sobre el que calcular: ");

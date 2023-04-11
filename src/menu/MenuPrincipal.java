@@ -30,6 +30,7 @@ public class MenuPrincipal {
 			if (opcion >= 0 && opcion <= 2) {
 				switch (opcion) {
 				case 0:
+					System.out.println("¡Adios!");
 					salir = true;
 					break;
 				case 1:
