@@ -11,7 +11,6 @@ public class MenuCalculoAvanzado {
 
 		PotenciayRaizCuadrada potenciayRaizCuadrada = new PotenciayRaizCuadrada();
 		SenoCosenoTangente senoCosenoTangente = new SenoCosenoTangente();
-		MenuPrincipal menuPrincipal = new MenuPrincipal();
 		int opcion = 0;
 		Double inputA = 0.0;
 		Double inputB = 0.0;
@@ -22,7 +21,7 @@ public class MenuCalculoAvanzado {
 		System.out.println("¡Bienvenido a la calculadora!");
 		do {
 			System.out.println("\n Elija la opcion que quiera ejecutar pulsando"
-					+ "\n 1 para potencia \n 2 para raiz cuadrada \n 3 para seno \n 4 para coseno \n 5 para tangente \n 0 para salir a menu principal ");
+					+ "\n 1 para potencia \n 2 para raiz  \n 3 para seno \n 4 para coseno \n 5 para tangente \n 0 para salir a menu principal ");
 			if (sc.hasNextInt()) {
 				opcion = sc.nextInt();
 			} else {
@@ -33,8 +32,8 @@ public class MenuCalculoAvanzado {
 			if (opcion >= 0 && opcion <= 5) {
 				switch (opcion) {
 				case 0:
-					menuPrincipal.menuPrincipal();
-
+					System.out.println("Volviendo a menu principal");
+					salir = true;
 					break;
 				case 1:
 					inputA = input(1);

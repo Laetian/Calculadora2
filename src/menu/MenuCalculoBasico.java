@@ -5,15 +5,12 @@ import java.util.Scanner;
 import calculobasico.MultiplicacionyDivision;
 import calculobasico.SumayResta;
 
-
-
 public class MenuCalculoBasico {
-	
+
 	public void menuCalculoBasico() {
 
 		SumayResta sumayResta = new SumayResta();
 		MultiplicacionyDivision multiplicacionyDivision = new MultiplicacionyDivision();
-		MenuPrincipal menuPrincipal = new MenuPrincipal();
 		int opcion = 0;
 		Double inputA = 0.0;
 		Double inputB = 0.0;
@@ -35,8 +32,8 @@ public class MenuCalculoBasico {
 			if (opcion >= 0 && opcion <= 4) {
 				switch (opcion) {
 				case 0:
-					menuPrincipal.menuPrincipal();
- 
+					System.out.println("Volviendo a menu principal");
+					salir = true;
 					break;
 				case 1:
 					inputA = input(1);
@@ -70,7 +67,7 @@ public class MenuCalculoBasico {
 		} while (salir == false);
 
 	}
-	
+
 	public Double input(int opcion) {
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
@@ -90,7 +87,7 @@ public class MenuCalculoBasico {
 		}
 		return input;
 	}
-	
+
 	public boolean continuar() {
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);

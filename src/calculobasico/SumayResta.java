@@ -1,7 +1,7 @@
 package calculobasico;
 
 public class SumayResta {
-	
+
 	public void suma(double a, double b) {
 		System.out.println("Suma de " + a + " más " + b + " da como resultado: " + (a + b));
 	}
