@@ -11,6 +11,7 @@ public class MenuCalculoAvanzado {
 
 		PotenciayRaizCuadrada potenciayRaizCuadrada = new PotenciayRaizCuadrada();
 		SenoCosenoTangente senoCosenoTangente = new SenoCosenoTangente();
+		Inputs inputs = new Inputs();                                     
 		int opcion = 0;
 		Double inputA = 0.0;
 		Double inputB = 0.0;
@@ -36,31 +37,31 @@ public class MenuCalculoAvanzado {
 					salir = true;
 					break;
 				case 1:
-					inputA = input(1);
-					inputB = input(2);
+					inputA = inputs.input(3);
+					inputB = inputs.input(4);
 					potenciayRaizCuadrada.potencia(inputA, inputB);
-					salir = continuar();
+					salir = inputs.continuar();
 					break;
 				case 2:
-					inputA = input(1);
-					inputB = input(2);
+					inputA = inputs.input(3);
+					inputB = inputs.input(4);
 					potenciayRaizCuadrada.raizCuadrada(inputA, inputB);
-					salir = continuar();
+					salir = inputs.continuar();
 					break;
 				case 3:
-					inputA = input(3);
+					inputA = inputs.input(5);
 					senoCosenoTangente.seno(inputA);
-					salir = continuar();
+					salir = inputs.continuar();
 					break;
 				case 4:
-					inputA = input(3);
+					inputA = inputs.input(5);
 					senoCosenoTangente.coseno(inputA);
-					salir = continuar();
+					salir = inputs.continuar();
 					break;
 				case 5:
-					inputA = input(3);
+					inputA = inputs.input(5);
 					senoCosenoTangente.tangente(inputA);
-					salir = continuar();
+					salir = inputs.continuar();
 					break;
 				}
 			} else {
@@ -71,47 +72,6 @@ public class MenuCalculoAvanzado {
 
 	}
 
-	public Double input(int opcion) {
-		@SuppressWarnings("resource")
-		Scanner sc = new Scanner(System.in);
-		double input = 0;
-		if (opcion == 1) {
-			System.out.println("Introduce la base: ");
-		}
-		if (opcion == 2) {
-			System.out.println("Introduce el exponente: ");
-		}
-		if (opcion == 3) {
-			System.out.println("Introduce el número sobre el que calcular: ");
-		}
 
-		if (sc.hasNextDouble()) {
-			input = sc.nextDouble();
-		} else {
-			System.out.println("Input no valido, debes introducir un número");
-			input = input(1);
-		}
-		return input;
-	}
-
-	public boolean continuar() {
-		@SuppressWarnings("resource")
-		Scanner sc = new Scanner(System.in);
-		String si = "s";
-		String no = "n";
-		System.out.println("¿Quiere continuar operando? s/n");
-		String response = sc.nextLine();
-		if (response.equalsIgnoreCase(si)) {
-			return false;
-		}
-		if (response.equalsIgnoreCase(no)) {
-			System.out.println("Volviendo a menu principal");
-			return true;
-		} else {
-			System.out.println("Input no válido, debe introdcur una opción válida");
-			continuar();
-			return false;
-		}
-	}
 
 }
