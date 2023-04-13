@@ -21,7 +21,7 @@ public class MenuPrincipal {
 		do {
 			System.out.println("\n Elija la opcion que quiera ejecutar pulsando"
 					+ "\n 1 para calculo básico \n 2 para calculo avanzado \n 0 para salir del programa");
-			
+
 			opcion = inputs.opcion();
 
 			if (opcion >= 0 && opcion <= 2) {

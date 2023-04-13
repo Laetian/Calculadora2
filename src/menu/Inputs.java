@@ -4,9 +4,10 @@ import java.util.Scanner;
 
 public class Inputs {
 
+	@SuppressWarnings("resource")
+	Scanner sc = new Scanner(System.in);
+
 	public Double input(int opcion) {
-		@SuppressWarnings("resource")
-		Scanner sc = new Scanner(System.in);
 
 		double input = 0;
 
@@ -31,6 +32,7 @@ public class Inputs {
 
 		if (sc.hasNextDouble()) {
 			input = sc.nextDouble();
+			sc.nextLine();
 		} else {
 			System.out.println("Input no valido, debes introducir un número");
 			input = input(1);
@@ -40,12 +42,11 @@ public class Inputs {
 	}
 
 	public int opcion() {
-		@SuppressWarnings("resource")
-		Scanner sc = new Scanner(System.in);
 
 		int input = 0;
 		if (sc.hasNextInt()) {
 			input = sc.nextInt();
+			sc.nextLine();
 		} else {
 			System.out.println("Input no valido, debes introducir un número");
 			input = opcion();
@@ -55,8 +56,7 @@ public class Inputs {
 	}
 
 	public boolean continuar() {
-		@SuppressWarnings("resource")
-		Scanner sc = new Scanner(System.in);
+
 		String si = "s";
 		String no = "n";
 		System.out.println("¿Quiere continuar operando? s/n");

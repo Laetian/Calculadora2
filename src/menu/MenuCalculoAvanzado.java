@@ -11,7 +11,7 @@ public class MenuCalculoAvanzado {
 
 		PotenciayRaizCuadrada potenciayRaizCuadrada = new PotenciayRaizCuadrada();
 		SenoCosenoTangente senoCosenoTangente = new SenoCosenoTangente();
-		Inputs inputs = new Inputs();                                     
+		Inputs inputs = new Inputs();
 		int opcion = 0;
 		Double inputA = 0.0;
 		Double inputB = 0.0;
@@ -71,7 +71,5 @@ public class MenuCalculoAvanzado {
 		} while (salir == false);
 
 	}
-
-
 
 }
