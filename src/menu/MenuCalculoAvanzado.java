@@ -1,7 +1,5 @@
 package menu;
 
-import java.util.Scanner;
-
 import calculoAvanzado.PotenciayRaizCuadrada;
 import calculoAvanzado.SenoCosenoTangente;
 
@@ -15,20 +13,14 @@ public class MenuCalculoAvanzado {
 		int opcion = 0;
 		Double inputA = 0.0;
 		Double inputB = 0.0;
-		@SuppressWarnings("resource")
-		Scanner sc = new Scanner(System.in);
+
 		boolean salir = false;
 
 		System.out.println("¡Bienvenido a la calculadora!");
 		do {
 			System.out.println("\n Elija la opcion que quiera ejecutar pulsando"
 					+ "\n 1 para potencia \n 2 para raiz  \n 3 para seno \n 4 para coseno \n 5 para tangente \n 0 para salir a menu principal ");
-			if (sc.hasNextInt()) {
-				opcion = sc.nextInt();
-			} else {
-				System.out.println("Input no válido, debe introdcur una opción válida");
-				menuCalculoAvanzado();
-			}
+			opcion = inputs.opcion();
 
 			if (opcion >= 0 && opcion <= 5) {
 				switch (opcion) {

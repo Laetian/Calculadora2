@@ -1,6 +1,5 @@
 package menu;
 
-import java.util.Scanner;
 
 public class MenuPrincipal {
 
@@ -11,8 +10,6 @@ public class MenuPrincipal {
 	int opcion = 0;
 	Double inputA = 0.0;
 	Double inputB = 0.0;
-	@SuppressWarnings("resource")
-	Scanner sc = new Scanner(System.in);
 	boolean salir = false;
 
 	public void menuPrincipal() {
