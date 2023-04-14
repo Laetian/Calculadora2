@@ -9,7 +9,7 @@ public class Inputs {
 
 	public Double input(int opcion) {
 
-		double input = 0;
+		double input;
 
 		if (opcion == 1) {
 			System.out.println("Introduce el primer número: ");
@@ -32,13 +32,13 @@ public class Inputs {
 
 		if (sc.hasNextDouble()) {
 			input = sc.nextDouble();
-			sc.nextLine();
+			return input;
 		} else {
 			System.out.println("Input no valido, debes introducir un número");
-			input = input(1);
+			Scanner sc = new Scanner(System.in);
+			return  input(opcion);
 		}
 
-		return input;
 	}
 
 	public int opcion() {
@@ -46,13 +46,14 @@ public class Inputs {
 		int input = 0;
 		if (sc.hasNextInt()) {
 			input = sc.nextInt();
-			sc.nextLine();
+			return input;
 		} else {
 			System.out.println("Input no valido, debes introducir un número");
-			input = opcion();
+			Scanner sc = new Scanner(System.in);
+			return opcion();
 		}
 
-		return input;
+
 	}
 
 	public boolean continuar() {
@@ -70,8 +71,9 @@ public class Inputs {
 			return true;
 		} else {
 			System.out.println("Input no válido, debe introdcur una opción válida");
-			continuar();
-			return false;
+			Scanner sc = new Scanner(System.in);
+			return continuar();
+
 		}
 
 	}
