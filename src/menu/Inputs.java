@@ -35,7 +35,7 @@ public class Inputs {
 			return input;
 		} else {
 			System.out.println("Input no valido, debes introducir un número");
-			Scanner sc = new Scanner(System.in);
+			sc.next();
 			return  input(opcion);
 		}
 
@@ -49,7 +49,7 @@ public class Inputs {
 			return input;
 		} else {
 			System.out.println("Input no valido, debes introducir un número");
-			Scanner sc = new Scanner(System.in);
+			sc.next();
 			return opcion();
 		}
 
@@ -71,9 +71,7 @@ public class Inputs {
 			return true;
 		} else {
 			System.out.println("Input no válido, debe introdcur una opción válida");
-			Scanner sc = new Scanner(System.in);
 			return continuar();
-
 		}
 
 	}
